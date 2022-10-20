@@ -20,6 +20,11 @@ public class MyGLSurfaceView extends GLSurfaceView{
     private MyNativeRender mNativeRender;
     public MyGLSurfaceView(Context context) {
         super(context);
+        this.setEGLContextClientVersion(3);
+        mNativeRender = new MyNativeRender();
+        mGLRender = new MyGLRender(mNativeRender);
+        setRenderer(mGLRender);
+        setRenderMode(RENDERMODE_CONTINUOUSLY);
     }
 
     public MyGLSurfaceView(Context context, AttributeSet attrs) {
