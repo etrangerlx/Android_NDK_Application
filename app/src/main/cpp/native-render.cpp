@@ -4,7 +4,7 @@
 
 
 #include <jni.h>
-#include "MyGLRenderContext.h"
+#include "GLRender/MyGLRenderContext.h"
 
 #define NATIVE_RENDER_CLASS_NAME "com/rainbow/myapplication/MyNativeRender"
 

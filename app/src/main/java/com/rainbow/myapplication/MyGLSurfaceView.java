@@ -35,9 +35,6 @@ public class MyGLSurfaceView extends GLSurfaceView{
         setRenderer(mGLRender);
         setRenderMode(RENDERMODE_CONTINUOUSLY);
     }
-    public MyNativeRender getNativeRender() {
-        return mNativeRender;
-    }
 
     public static class  MyGLRender implements GLSurfaceView.Renderer {
         private MyNativeRender mNativeRender;

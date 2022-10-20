@@ -13,21 +13,26 @@ project("myapplication")
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
+set(GLCOMEPTE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/glCompute)
+set(LOGUTILS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/LogUtils)
+set(ImageBase_PATH ${CMAKE_CURRENT_SOURCE_DIR}/ImageBase)
 
 add_library( # Sets the name of the library.
              native-render
 
              # Sets the library as a shared library.
              SHARED
-
              # Provides a relative path to your source file(s).
-             native-render.cpp GLUtils.cpp MyGLRenderContext.cpp TriangleSample.cpp)
+             native-render.cpp
+             ${GLCOMEPTE_PATH}/GLUtils.cpp GLRender/MyGLRenderContext.cpp Triangle/TriangleSample.cpp)
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
 # default, you only need to specify the name of the public NDK library
 # you want to add. CMake verifies that the library exists before
 # completing its build.
+include_directories(./LogUtils
+                    ./ImageBase ./glCompute)
 
 find_library( # Sets the name of the path variable.
               log-lib

@@ -7,9 +7,9 @@
 #include <EGL/egl.h>
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
-#include "LogUtil.h"
-#include "GLUtils.h"
-#include "TriangleSample.h"
+#include "../LogUtils/LogUtil.h"
+#include "../glCompute/GLUtils.h"
+#include "../Triangle/TriangleSample.h"
 class MyGLRenderContext {
 public:
     MyGLRenderContext();

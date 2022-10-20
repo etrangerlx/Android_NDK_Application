@@ -3,7 +3,7 @@
 //
 
 #include "GLUtils.h"
-#include "LogUtil.h"
+#include "../LogUtils/LogUtil.h"
 #include <stdlib.h>
 
 GLuint GLUtils::LoadShader(GLenum shaderType, const char *pSource)

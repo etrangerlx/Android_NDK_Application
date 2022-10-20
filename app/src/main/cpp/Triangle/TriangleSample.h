@@ -7,8 +7,8 @@
 #include <EGL/egl.h>
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
-#include "GLUtils.h"
-#include "LogUtil.h"
+#include "../glCompute/GLUtils.h"
+#include "../LogUtils/LogUtil.h"
 
 class TriangleSample {
 public:

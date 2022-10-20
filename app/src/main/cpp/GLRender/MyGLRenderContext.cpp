@@ -3,7 +3,7 @@
 //
 
 #include "MyGLRenderContext.h"
-#include "Image.h"
+#include "../ImageBase/Image.h"
 MyGLRenderContext* MyGLRenderContext::m_pContext = nullptr;
 
 MyGLRenderContext::MyGLRenderContext() {
