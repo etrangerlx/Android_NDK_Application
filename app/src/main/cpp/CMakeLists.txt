@@ -21,7 +21,9 @@ set(third-party-libs
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 include_directories(./FFmpeg/include)
-link_directories(./FFmpeg/lib/armv8-a)
+
+message(STATUS ${ANDROID_ABI})
+link_directories(FFmpeg/lib/arm64-v8a)
 
 add_library( # Sets the name of the library.
              native-ffmpeg

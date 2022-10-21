@@ -32,9 +32,10 @@ Java_com_rainbow_myapplication_FFMediaPlayer_native_1GetFFmpegVersion(
     strcat(strBuffer, "\nlibswscale : ");
     strcat(strBuffer, AV_STRINGIFY(LIBSWSCALE_VERSION));
     strcat(strBuffer, "\navcodec_configure : \n");
-//    strcat(strBuffer, avcodec_configuration());
-//    strcat(strBuffer, "\navcodec_license : ");
-//    strcat(strBuffer, avcodec_license());
+    strcat(strBuffer, avcodec_configuration());
+//    LOGI("%s",avcodec_configuration());
+    strcat(strBuffer, "\navcodec_license : ");
+    strcat(strBuffer, avcodec_license());
     return env->NewStringUTF(strBuffer);
 }
 #ifdef __cplusplus
